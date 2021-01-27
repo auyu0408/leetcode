@@ -25,8 +25,8 @@ int main()
 {
     int *num,*size;
     int *value,len=0,tar,temp;
-    size=(int *)malloc(sizeof(int));
     num=(int *)malloc(sizeof(int)*MAX);
+    size=(int *)malloc(sizeof(int));
     while(scanf("%d",&temp)!=EOF)
     {
         *(num+len)=temp;
@@ -35,5 +35,6 @@ int main()
     tar=num[len-1];
     value=twoSum(num,len-1,tar,size);
     printf("[%d,%d]",value[0],value[1]);
+    free(size);
     return 0;
 }
