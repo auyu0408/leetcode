@@ -81,18 +81,34 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     free_hash(Table);
     return Value;
 }
-int main()
+int** threeSum(int* nums,int numsSize,int* returnSize,int** returnColumnSizes)
 {
-    int num[MAX],*size;
-    int *value,len=0,tar,temp;
-    size=(int *)malloc(sizeof(int));
-    while(scanf("%d",&temp)!=EOF)
-    {
-        num[len]=temp;
-        len++;
-    }
-    tar=num[len-1];
-    value=twoSum(num,len-1,tar,size);
-    printf("[%d,%d]",value[0],value[1]);
-    return 0;
+	int x,y,z,count=0;
+	*returnSize=3;
+	hash table[P];
+	initial(table);
+	for(int i=0;i<numsSize;i++)
+	{
+		hashing(table,nums[i],i)
+	}
+	for(int i=0;i<numsSize;i++)
+	{
+		x=nums[i];
+		for(int j=i;j<numsSize;j++)
+		{
+			y=nums[j];
+			z=-x-y;
+			node* nptr==table[abs(z)%P].Node;
+			int flag=0;
+			while(nptr!=NULL)
+			{
+				if(nums[nptr->index]==z&&nptr->index!=j&&nptr->index!=i)
+				{
+					
+				}
+			}
+		}
+		
+	}
+
 }
